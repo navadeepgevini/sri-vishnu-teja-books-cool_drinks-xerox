@@ -1,0 +1,16 @@
+Business Name: Sri Vishnu Teja Books and Xerox
+Location: Rs Road, Opposite Apollo Pharmacy, Near Bajaj Showroom, Vinayaka Nagar, Koduru, Andhra Pradesh 516101.
+Phone: 099510 21282
+Operating Hours: Monday through Sunday, 8:00 AM to 10:00 PM. (Highlighting this 7-day availability is great for students).
+
+E-Commerce Product Catalog (Inventory Categories):
+1. Educational Books: School and college textbooks, competitive exam materials, notebooks, and record books.
+2. Stationery & Supplies: Pens, geometry boxes, files, folders, and general office equipment.
+
+Specialized Service Portal (Xerox & Print Services):
+1. Document Upload System: Feature for customers to upload PDFs/Word documents, select print settings (Color/B&W, paper size, spiral binding), and pay online.
+2. In-Store Pick-up (BOPIS): "Buy Online, Pick Up In-Store" option so local customers can skip the queue and collect ready printouts.
+
+Technical Architecture & Trust Elements:
+1. Tech Stack Recommendation: React or Vite for a fast frontend user interface; Django for the backend to securely manage document uploads, print queues, and inventory.
+2. Social Proof: The shop has a 5.0-star rating on Google Maps. Embed these reviews on the homepage to build credibility.

@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production build outputs
+dist/
+**/dist/
+
+# Environment files and credentials (CRITICAL - DO NOT COMMIT)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+serviceAccountKey.json
+**/serviceAccountKey.json
+*-firebase-adminsdk-*.json
+**/*-firebase-adminsdk-*.json
+.firebase/
+**/.firebase/
+
+# External cloned repositories
+ECC/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log

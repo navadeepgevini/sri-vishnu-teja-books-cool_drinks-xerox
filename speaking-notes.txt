@@ -1,0 +1,53 @@
+SPEAKING NOTES - Sri Vishnu Teja website
+========================================
+
+1. ABOUT THE "PUBLIC-APIS" GITHUB LIST
+--------------------------------------
+- It is only a LIST of free outside services.
+- We do NOT need it now.
+- Our site already has what it needs:
+    * Products and orders  -> Firebase (free)
+    * Customer login       -> Google sign-in
+    * Orders to the shop   -> WhatsApp
+    * Payment (later)      -> UPI link + QR code
+    * Location             -> Google Maps link
+- Outside free services can stop working any time. Fewer parts = safer.
+- Maybe later: a free book service to fill book names by ISBN. Only if we sell many books online.
+
+
+2. WHAT IS READY NOW
+--------------------
+- Home page and Shop page.
+- 48 products with real MRP prices.
+- Search, filters, sort.
+- Add to Cart works.
+- Cart page: change quantity, remove, total.
+- Google sign-in before ordering.
+- Order is sent to the shop on WhatsApp.
+- Xerox prices shown on the site.
+- English only (Telugu removed).
+
+
+3. WHAT IS NOT READY YET
+------------------------
+- Online UPI payment.
+- Orders saved in the system.
+- Order status page.
+- Xerox file upload page.
+- Shop owner / counter screen.
+
+
+4. QUESTIONS TO ASK THE SHOP OWNER
+----------------------------------
+- Bulk xerox Rs 1.50 per side: from how many pages? (50 or 100?)
+- Shop UPI ID? (needed for online payment)
+- Phone number: is it 99510 21282?
+- Four-line notebook and square notebook: do you sell them? Price?
+- Hair oil 200 ml: is it Rs 70?
+- Real stock count for each item? (now we show sample numbers)
+
+
+5. NEXT STEP (choose one)
+-------------------------
+- Checkout with UPI payment, or
+- Xerox file upload page.

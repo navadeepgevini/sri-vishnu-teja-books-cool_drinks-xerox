@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+
+/* `static` so every token exists as a CSS variable; the 3D scene reads them at runtime. */
+@theme static {
+  --color-*: initial;
+
+  /* Brand tokens */
+  --color-navy: #1f2640;
+  --color-paper: #ffffff;
+  --color-soft-paper: #f6f5f2;
+  --color-cream: #f7efe3;
+  --color-powder: #d6e3ef;
+  --color-sand: #cdbb9e;
+  --color-soft-saffron: #edc27e;
+  --color-saffron: #e8952b;
+  --color-ink: #1b1f2a;
+  --color-muted: #6b7280;
+  --color-border: #e7e3dc;
+  --color-success: #2f8f5b;
+  --color-error: #c0453a;
+
+  /* Text-only tokens (AA on paper, soft-paper, cream, powder). Never on soft-saffron. */
+  --color-muted-strong: #565d6b;
+  --color-saffron-text: #8a5212;
+  --color-success-text: #23704a;
+
+  /* Category tints */
+  --color-cat-long: #88a3c0;
+  --color-cat-short: #8faf8c;
+  --color-cat-record: #a8554f;
+  --color-cat-pens: #7aafaa;
+  --color-cat-pencils: #d9b25c;
+  --color-cat-geometry: #a197b8;
+  --color-cat-paper: #c98b6b;
+  --color-cat-office: #d29ea2;
+
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px 0 rgb(31 38 64 / 0.05), 0 2px 6px -1px rgb(31 38 64 / 0.05);
+  --shadow-lift: 0 8px 24px -4px rgb(31 38 64 / 0.1), 0 2px 6px -1px rgb(31 38 64 / 0.06);
+
+  --animate-shimmer: shimmer 1.4s linear infinite;
+  @keyframes shimmer {
+    from {
+      background-position: 150% 0;
+    }
+    to {
+      background-position: -50% 0;
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper font-sans text-base text-ink antialiased;
+  }
+  /* Two-tone ring: visible on white and on navy. */
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-paper);
+  }
+}
+
+@utility skeleton {
+  background-color: var(--color-soft-paper);
+  background-image: linear-gradient(
+    100deg,
+    var(--color-soft-paper) 30%,
+    var(--color-border) 50%,
+    var(--color-soft-paper) 70%
+  );
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

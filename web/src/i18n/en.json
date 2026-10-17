@@ -1,0 +1,325 @@
+{
+  "meta": {
+    "title": "Sri Vishnu Teja Books, Xerox & Cool Drinks · Railway Koduru"
+  },
+  "common": {
+    "skipToContent": "Skip to main content",
+    "model3d": "3D model of {{name}}. Drag to rotate.",
+    "newTab": "(opens in a new tab)",
+    "backHome": "Back to home"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signInWithGoogle": "Sign in with Google",
+    "signOut": "Sign out",
+    "account": "Your account",
+    "requiredTitle": "Sign in to place an order",
+    "requiredBody": "We use your Google account to keep track of your orders and to contact you about pickup.",
+    "error": "Sign-in didn't work. If you opened this link inside WhatsApp or another app, open it in Chrome and try again."
+  },
+  "errors": {
+    "pageTitle": "Something went wrong",
+    "pageBody": "This page couldn't load. Check your connection, then try again.",
+    "reload": "Reload page"
+  },
+  "shop": {
+    "name": "Sri Vishnu Teja",
+    "fullName": "Sri Vishnu Teja Books, Xerox & Cool Drinks",
+    "tagline": "Books, Xerox & Cool Drinks",
+    "address": "Near Bajaj Showroom, RS Road, Railway Kodur, Tirupati Dist., Andhra Pradesh 516101, India",
+    "owner": "Gevini Murali Mohan",
+    "email": "navadeeproy@gmail.com",
+    "hoursDaily": "Open daily {{open}} – {{close}}"
+  },
+  "open": {
+    "now": "Open now",
+    "closed": "Closed · opens {{time}}",
+    "closedToday": "Closed today"
+  },
+  "nav": {
+    "main": "Main",
+    "mobile": "Quick links",
+    "home": "Home",
+    "shop": "Shop",
+    "xerox": "Xerox Print",
+    "xeroxShort": "Xerox",
+    "popular": "Popular",
+    "orderStatus": "Order Status",
+    "orders": "Orders",
+    "cart": "Cart"
+  },
+  "search": {
+    "label": "Search products",
+    "placeholder": "Search notebooks, pens, xerox…",
+    "submit": "Search"
+  },
+  "utility": {
+    "whatsapp": "WhatsApp the shop",
+    "uploadXerox": "Upload for Xerox"
+  },
+  "hero": {
+    "eyebrow": "Student pickup express · Railway Koduru",
+    "titleLine1": "Skip the Xerox Queue.",
+    "titleLine2": "Shop Stationery Online.",
+    "subtitle": "Order notebooks, pens and xerox in minutes. Pay by UPI and collect your packed order at the counter with no waiting.",
+    "ctaXerox": "Upload for Xerox",
+    "ctaShop": "Shop Stationery",
+    "chipPickup": "Ready the same day",
+    "chipBulk": "{{price}} bulk xerox",
+    "chipUpi": "Instant UPI",
+    "stageBadge": "Interactive 3D · Drag to rotate 360°",
+    "stageLabel": "3D display of notebooks, pens and a paper stack on saffron podiums. Drag to rotate."
+  },
+  "categories": {
+    "eyebrow": "Railway Koduru counter catalogue",
+    "title": "Shop Our Top Categories",
+    "subtitle": "Shelf stock ready for same-day pickup",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items"
+  },
+  "popular": {
+    "eyebrow": "Koduru student picks",
+    "title": "Popular With Students This Week",
+    "viewAll": "View all {{count}} items",
+    "viewAllNoCount": "View all items"
+  },
+  "product": {
+    "badge360": "360°",
+    "inStock": "In stock",
+    "lowStock": "Only {{count}} left!",
+    "price": "Price",
+    "priceUnavailable": "Price at the counter",
+    "outOfStock": "Out of stock",
+    "from": "From {{price}}",
+    "pages": "{{count}} pages",
+    "options": "{{count}} options",
+    "addToCart": "Add to Cart",
+    "added": "Added",
+    "addedToCart": "{{name}} added to your cart",
+    "noMoreStock": "No more in stock",
+    "chooseOption": "Choose an option for {{name}}"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items",
+    "emptyTitle": "Your cart is empty",
+    "emptyBody": "Browse the shop and tap Add to Cart on anything you need.",
+    "continue": "Continue shopping",
+    "each": "{{price}} each",
+    "unavailable": "No longer available: it won't be included in your order.",
+    "decrease": "Remove one {{name}}",
+    "increase": "Add one more {{name}}",
+    "remove": "Remove {{name}} from cart",
+    "summary": "Order summary",
+    "total": "Total",
+    "pickupNote": "Pickup only, at our RS Road counter.",
+    "signInToOrder": "Sign in with Google to order",
+    "sendWhatsapp": "Send order on WhatsApp",
+    "whatsappNote": "The shop confirms your order on WhatsApp and keeps it ready for pickup. Online payment is coming soon.",
+    "clear": "Clear cart",
+    "message": {
+      "intro": "New order from {{name}} ({{email}}):",
+      "line": "{{index}}. {{name}} ({{option}}) x {{qty}} = {{total}}",
+      "total": "Total: {{total}}",
+      "pickup": "I will pick it up at the shop."
+    }
+  },
+  "rulings": {
+    "single": "Single line",
+    "double": "Double line",
+    "four": "Four line",
+    "unruled": "Unruled"
+  },
+  "how": {
+    "eyebrow": "Fast counter pickups",
+    "title": "How Sri Vishnu Teja Express Works",
+    "subtitle": "No waiting at the RS Road counter. Packed and checked before you arrive.",
+    "order": {
+      "title": "Order or Upload PDF",
+      "body": "Pick notebooks and pens, or upload your PDF for xerox.",
+      "note": "Stationery and xerox in one order"
+    },
+    "pay": {
+      "title": "Pay Securely by UPI",
+      "body": "Pay with any UPI app and get instant confirmation with your pickup code.",
+      "note": "Direct shop UPI"
+    },
+    "collect": {
+      "title": "Collect at Counter",
+      "body": "Walk into our shop on RS Road, opposite Apollo Pharmacy. Show your pickup code and take your packed order.",
+      "note": "Packed and labelled"
+    }
+  },
+  "xerox": {
+    "chip": "B&W and colour xerox",
+    "title": "Xerox & Lamination",
+    "rate": "{{price}} per side",
+    "bulk": "· {{price}} bulk from {{count}} sides",
+    "doubleSide": "Double-sided sheet: {{price}}",
+    "cardCopy": "Aadhaar, PAN or ration card copy: {{price}}",
+    "lamination": "Lamination: {{only}} · laminated card copy: {{withCopy}}",
+    "colour": "Colour xerox: from {{price}} per page (depends on the colours)",
+    "body": "Black & white and colour xerox, ID card copies and lamination, ready at the counter.",
+    "cta": "Upload PDF for Xerox",
+    "modelLabel": "Paper stack"
+  },
+  "visit": {
+    "eyebrow": "Pickup counter",
+    "title": "Visit Us",
+    "addressLabel": "Address",
+    "ownerLabel": "Proprietor",
+    "emailLabel": "Email",
+    "hoursLabel": "Hours",
+    "call": "Call {{phone}}",
+    "whatsapp": "WhatsApp",
+    "maps": "Open in Google Maps",
+    "directions": "Get directions",
+    "mapTitle": "Map showing Sri Vishnu Teja shop, near Bajaj Showroom, RS Road, Railway Kodur",
+    "pickupTitle": "Pickup only",
+    "pickupBody": "Collect your order at the counter. We don't deliver, and you don't need an account."
+  },
+  "assistant": {
+    "open": "Ask us",
+    "openLabel": "Open the shop helper",
+    "title": "Shop helper",
+    "subtitle": "Quick answers about the shop",
+    "close": "Close the shop helper",
+    "inputLabel": "Type your question",
+    "placeholder": "Example: long notebook price",
+    "send": "Send",
+    "you": "You",
+    "bot": "Shop helper",
+    "welcome": "Hi! Ask me about products, prices, xerox, timings or the shop's location.",
+    "quick": {
+      "hours": "Timings",
+      "xerox": "Xerox prices",
+      "location": "Location",
+      "contact": "Contact",
+      "delivery": "Delivery?"
+    },
+    "greet": "Hello! What are you looking for today? Try “Apsara pencils”, “xerox price” or “is the shop open?”.",
+    "thanks": "You're welcome! See you at the counter.",
+    "hoursOpen": "We're open now, until {{close}}.",
+    "hoursClosed": "We're closed right now. We open at {{open}}.",
+    "hoursClosedToday": "The shop is closed today.",
+    "hoursDaily": "Open every day, {{open}} – {{close}}.",
+    "xeroxTitle": "Xerox and lamination prices:",
+    "xeroxBw": "Black & white: {{price}} per side",
+    "xeroxBulk": "Bulk: {{price}} per side from {{count}} sides",
+    "xeroxDouble": "Double-sided sheet: {{price}}",
+    "xeroxCard": "Aadhaar, PAN or ration card copy: {{price}}",
+    "xeroxLamination": "Lamination: {{price}}",
+    "xeroxLaminatedCard": "Laminated card copy: {{price}}",
+    "xeroxColour": "Colour xerox: from {{price}} per page",
+    "xeroxNoBinding": "We don't do spiral binding.",
+    "location": "{{name}}, {{address}}.",
+    "contact": "Phone and WhatsApp: {{phone}}. Email: {{email}}. Proprietor: {{owner}}.",
+    "delivery": "Sorry, we don't deliver. Please pick up your order at the counter.",
+    "payment": "Pay at the counter, by cash or any UPI app.",
+    "order": "Add items to your cart, then send the order to us on WhatsApp. We keep it ready for pickup at the counter.",
+    "found": "Here's what I found:",
+    "foundMore": "Here are the best matches ({{count}} found):",
+    "priceHidden": "Price at the counter",
+    "inStock": "In stock",
+    "lowStock": "Only {{count}} left",
+    "outOfStock": "Out of stock",
+    "notFound": "Sorry, I couldn't find that. Try another word, or ask the shop on WhatsApp.",
+    "thinking": "Checking…",
+    "busy": "Many questions right now. Please try again in a minute, or ask the shop on WhatsApp.",
+    "aiNote": "AI answer. Please confirm prices at the counter.",
+    "action": {
+      "xerox": "Send files for xerox",
+      "directions": "Get directions",
+      "map": "See the map",
+      "call": "Call the shop",
+      "whatsapp": "Ask on WhatsApp",
+      "shop": "Open the shop",
+      "cart": "Go to cart",
+      "seeAll": "See all in shop"
+    }
+  },
+  "footer": {
+    "contactTitle": "Direct contact",
+    "owner": "Proprietor: {{name}}",
+    "hours": "Shop hours: Mon–Sun, {{open}} – {{close}}",
+    "call": "Call shop",
+    "whatsapp": "WhatsApp us",
+    "promiseTitle": "Koduru Express promise",
+    "promiseBody": "In-store pickup · Secure UPI payment · No waiting",
+    "copyright": "© {{year}} Sri Vishnu Teja Books, Xerox & Cool Drinks. All rights reserved.",
+    "serving": "Serving students and professionals of Railway Koduru"
+  },
+  "pages": {
+    "shop": {
+      "eyebrow": "Counter catalogue",
+      "title": "Shop Stationery",
+      "subtitle": "Everything on our shelves, ready for same-day pickup at the counter.",
+      "searchedFor": "Results for “{{q}}”",
+      "category": "Category",
+      "all": "All",
+      "brand": "Brand",
+      "ruling": "Ruling",
+      "pages": "Pages",
+      "price": "Price",
+      "priceUnder": "Under {{price}}",
+      "priceBetween": "{{min}} – {{max}}",
+      "priceOver": "Over {{price}}",
+      "sort": "Sort by",
+      "sortPopular": "Popular first",
+      "sortPriceAsc": "Price: low to high",
+      "sortPriceDesc": "Price: high to low",
+      "sortName": "Name: A to Z",
+      "clear": "Clear filters",
+      "showing": "Showing {{shown}} of {{total}}",
+      "loadMore": "Load more",
+      "emptyTitle": "No items match these filters",
+      "emptyBody": "Try removing a filter or searching for something else.",
+      "offlineTitle": "Prices and stock aren't available right now",
+      "offlineBody": "You can still browse our regular range. Check your connection and try again, or call the shop.",
+      "retry": "Try again"
+    },
+    "xerox": {
+      "title": "Xerox Print",
+      "subtitle": "Send your files to the shop on WhatsApp. We print them and keep them ready for pickup.",
+      "dropTitle": "Add your files",
+      "dropHint": "PDF, Word or photos. Up to {{files}} files, {{max}} MB each.",
+      "choose": "Choose files",
+      "remove": "Remove {{name}}",
+      "errorType": "{{name}}: only PDF, Word and photos can be sent.",
+      "errorTooBig": "{{name}} is bigger than {{max}} MB.",
+      "errorTooMany": "You can send up to {{max}} files at a time.",
+      "options": "Print options",
+      "copies": "Copies",
+      "bw": "Black & white",
+      "colour": "Colour",
+      "single": "Single side",
+      "double": "Both sides",
+      "note": "Note for the shop (optional)",
+      "notePlaceholder": "Example: print pages 1 to 10 only",
+      "send": "Send on WhatsApp",
+      "sending": "Sending files…",
+      "sendHint": "Your files are uploaded first, then WhatsApp opens with a link to each file.",
+      "sentNote": "Sent. Please check WhatsApp and make sure the files are attached.",
+      "sentWithFilesNote": "Sent. The shop can open your files from the links in the message.",
+      "uploadFailedTitle": "Could not upload the files",
+      "uploadFailedBody": "Check your internet and try again. You can also send the details now and attach the files yourself in WhatsApp.",
+      "sendWithoutFiles": "Send details, attach myself",
+      "shareTitle": "Xerox order",
+      "message": {
+        "intro": "Xerox order from {{name}} ({{email}}):",
+        "code": "Order code: {{code}}",
+        "link": "File {{index}}: {{url}}",
+        "file": "{{index}}. {{name}}",
+        "copies": "Copies: {{count}}",
+        "print": "Print: {{type}}, {{sides}}",
+        "note": "Note: {{note}}",
+        "attach": "I am attaching the files here."
+      }
+    },
+    "orderStatus": {
+      "title": "Order Status",
+      "body": "Order tracking is coming soon."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sri Vishnu Teja logo placeholder">
+  <!-- Placeholder logo. Replace this file (public/logo.svg) with the real shop logo. -->
+  <rect width="64" height="64" rx="14" fill="#F7EFE3"/>
+  <path d="M12 20c7-3 13-3 20 1v27c-7-4-13-4-20-1z" fill="#1F2640"/>
+  <path d="M52 20c-7-3-13-3-20 1v27c7-4 13-4 20-1z" fill="#1F2640" opacity=".85"/>
+  <path d="M16 26c4-1.4 8-1.2 12 .6M16 32c4-1.4 8-1.2 12 .6M36 26.6c4-1.8 8-2 12-.6M36 32.6c4-1.8 8-2 12-.6" stroke="#EDC27E" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <circle cx="32" cy="13" r="4" fill="#E8952B"/>
+</svg>

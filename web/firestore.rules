@@ -1,0 +1,73 @@
+rules_version = '2';
+
+// Sri Vishnu Teja — Firestore security rules.
+// There are no Cloud Functions (Spark plan), so these rules are the only server-side check.
+// Anything not matched below is denied.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // An admin (or counter staff) is anyone with a document at admins/{uid}.
+    // Those documents are created by hand in the Firebase console, never from the website.
+    function isAdmin() {
+      return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Shop settings (rates, hours, phone, UPI): readable by everyone, editable by admins only.
+    match /settings/{docId} {
+      allow read: if docId == 'shop';
+      allow write: if isAdmin();
+    }
+
+    // Categories: the public sees active ones only. Queries must filter on isActive == true,
+    // because rules do not filter results, they reject queries that could return hidden documents.
+    match /categories/{categoryId} {
+      allow read: if resource.data.isActive == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    // Products and their variants: same pattern as categories.
+    match /products/{productId} {
+      allow read: if resource.data.isActive == true || isAdmin();
+      allow write: if isAdmin();
+
+      match /variants/{variantId} {
+        allow read: if resource.data.isActive == true || isAdmin();
+        allow write: if isAdmin();
+      }
+    }
+
+    // The catalogue loads every active variant with one collection-group query. Collection-group
+    // queries only match a recursive wildcard, so this rule covers them (reads only; writes stay above).
+    match /{path=**}/variants/{variantId} {
+      allow read: if resource.data.isActive == true || isAdmin();
+    }
+
+    // Orders: a customer (anonymous uid) reads only their own; admins read all.
+    // Creating orders stays closed until Phase 4, where this rule gains the full re-check of every
+    // line total, the xerox price and the grand total against the product, variant and settings
+    // documents. Opening it earlier would let anyone write orders with made-up totals.
+    // Status, UTR, paidAt and every other change are admin-only.
+    match /orders/{orderId} {
+      allow read: if signedIn() && (resource.data.uid == request.auth.uid || isAdmin());
+      allow create: if false;
+      allow update, delete: if isAdmin();
+    }
+
+    // Daily order-code counters. Phase 4 opens a narrow increment-only rule for checkout.
+    match /counters/{day} {
+      allow read, write: if isAdmin();
+    }
+
+    // Admin list: a signed-in user may check their own entry (to unlock the admin app);
+    // nobody can create or change admins from the website.
+    match /admins/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+  }
+}
