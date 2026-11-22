@@ -59,9 +59,20 @@ function allowed(ip: string): boolean {
   return true
 }
 
+function isAllowedOrigin(origin: string | null): boolean {
+  if (!origin) return false
+  if (ORIGINS.has(origin)) return true
+  try {
+    const url = new URL(origin)
+    return url.hostname.endsWith('.vercel.app')
+  } catch {
+    return false
+  }
+}
+
 function cors(origin: string | null): Record<string, string> {
   return {
-    'Access-Control-Allow-Origin': origin && ORIGINS.has(origin) ? origin : 'null',
+    'Access-Control-Allow-Origin': isAllowedOrigin(origin) ? origin! : 'null',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'authorization, apikey, content-type, x-client-info',
     Vary: 'Origin',
