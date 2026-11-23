@@ -32,6 +32,14 @@ const cone = new THREE.ConeGeometry(1, 1, 24)
 const plane = new THREE.PlaneGeometry(1, 1)
 
 let shadowMaterial: THREE.MeshBasicMaterial | undefined
+
+if (typeof window !== 'undefined') {
+  const themeObserver = new MutationObserver(() => {
+    materials.clear()
+    shadowMaterial = undefined
+  })
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-theme'] })
+}
 /** Soft elliptical floor shadow (radial gradient in navy, per DESIGN.md). */
 function getShadowMaterial() {
   if (shadowMaterial) return shadowMaterial

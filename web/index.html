@@ -9,7 +9,23 @@
       name="description"
       content="Order notebooks, pens, school bags, cool drinks and xerox online from Sri Vishnu Teja Books, Xerox & Cool Drinks, Railway Koduru. Pay by UPI and pick up at the counter."
     />
+    <meta name="theme-color" content="#ffffff" />
     <title>Sri Vishnu Teja Books, Xerox &amp; Cool Drinks · Railway Koduru</title>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('svt_theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = saved === 'dark' || (!saved && prefersDark) || (saved === 'system' && prefersDark);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute('content', '#0c0f17');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

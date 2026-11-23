@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Search, ShoppingBag } from 'lucide-react'
 import AccountButton from '../common/AccountButton'
+import ThemeToggle from '../common/ThemeToggle'
 import { cartCount, useCart } from '../../lib/cart'
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
@@ -83,6 +84,7 @@ export default function Navbar() {
             <Search aria-hidden className="size-5" />
             <span className="sr-only">{t('search.submit')}</span>
           </Link>
+          <ThemeToggle className={`${iconButton} inline-flex`} />
           <Link to="/cart" className={`${iconButton} relative inline-flex`}>
             <ShoppingBag aria-hidden className="size-[22px]" />
             {itemsInCart > 0 && (

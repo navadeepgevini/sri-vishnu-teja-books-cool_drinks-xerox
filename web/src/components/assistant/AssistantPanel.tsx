@@ -143,19 +143,19 @@ export default function AssistantPanel({ onClose }: { onClose: () => void }) {
       aria-labelledby={titleId}
       className="fixed inset-x-3 bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-50 flex h-[min(36rem,72dvh)] flex-col overflow-hidden rounded-2xl border border-border bg-soft-paper shadow-lift sm:inset-x-auto sm:right-4 sm:w-[24rem] lg:right-6 lg:bottom-6"
     >
-      <header className="flex items-center gap-3 bg-navy px-4 py-3 text-paper">
+      <header className="flex items-center gap-3 bg-navy px-4 py-3 text-paper dark:border-b dark:border-border dark:bg-[#111624] dark:text-ink">
         <Store aria-hidden className="size-6 shrink-0 text-soft-saffron" />
         <div className="min-w-0 flex-1">
           <h2 id={titleId} className="text-base leading-tight font-semibold">
             {t('assistant.title')}
           </h2>
-          <p className="text-sm text-powder">{t('assistant.subtitle')}</p>
+          <p className="text-sm text-powder dark:text-muted-strong">{t('assistant.subtitle')}</p>
         </div>
         <button
           type="button"
           onClick={onClose}
           aria-label={t('assistant.close')}
-          className="inline-flex size-11 items-center justify-center rounded-full transition-colors hover:bg-ink"
+          className="inline-flex size-11 items-center justify-center rounded-full transition-colors hover:bg-ink dark:hover:bg-cream"
         >
           <X aria-hidden className="size-5" />
         </button>
@@ -166,7 +166,7 @@ export default function AssistantPanel({ onClose }: { onClose: () => void }) {
           <div key={message.id} className={message.from === 'user' ? 'flex justify-end' : 'flex justify-start'}>
             <div
               className={`max-w-[88%] rounded-2xl px-3.5 py-2.5 text-base ${
-                message.from === 'user' ? 'rounded-br-md bg-navy text-paper' : 'rounded-bl-md border border-border bg-paper text-ink'
+                message.from === 'user' ? 'rounded-br-md bg-navy text-paper dark:bg-blue-600 dark:text-white' : 'rounded-bl-md border border-border bg-paper text-ink'
               }`}
             >
               <span className="sr-only">{message.from === 'user' ? t('assistant.you') : t('assistant.bot')}: </span>
@@ -216,7 +216,7 @@ export default function AssistantPanel({ onClose }: { onClose: () => void }) {
         <button
           type="submit"
           aria-label={t('assistant.send')}
-          className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-navy text-paper transition-colors hover:bg-ink"
+          className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-navy text-paper transition-colors hover:bg-ink dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700"
         >
           <Send aria-hidden className="size-5" />
         </button>

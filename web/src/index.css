@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @import '@fontsource/poppins/400.css';
 @import '@fontsource/poppins/500.css';
 @import '@fontsource/poppins/600.css';
@@ -53,6 +55,69 @@
       background-position: -50% 0;
     }
   }
+}
+
+html.dark,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Dark mode brand tokens */
+  --color-navy: #93c5fd;
+  --color-paper: #141824;
+  --color-soft-paper: #0b0e17;
+  --color-cream: #1b2130;
+  --color-powder: #161e2e;
+  --color-sand: #131722;
+  --color-soft-saffron: #f59e0b;
+  --color-saffron: #f59e0b;
+  --color-ink: #f1f5f9;
+  --color-muted: #8492a6;
+  --color-muted-strong: #94a3b8;
+  --color-border: #232b3d;
+  --color-success: #10b981;
+  --color-error: #f87171;
+
+  --color-saffron-text: #fbbf24;
+  --color-success-text: #34d399;
+
+  /* Category tints for dark mode (richer with luminous presence) */
+  --color-cat-long: #627d9a;
+  --color-cat-short: #6b8a68;
+  --color-cat-record: #8a433e;
+  --color-cat-pens: #598d89;
+  --color-cat-pencils: #b08d42;
+  --color-cat-geometry: #7d7396;
+  --color-cat-paper: #a56a4c;
+  --color-cat-office: #aa757a;
+
+  --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 2px 8px -1px rgb(0 0 0 / 0.4);
+  --shadow-lift: 0 10px 25px -5px rgb(0 0 0 / 0.6), 0 4px 10px -2px rgb(0 0 0 / 0.4);
+}
+
+/* In dark mode, primary action buttons, links, and chat bubbles use vibrant brand blue */
+html.dark button.bg-navy,
+html.dark a.bg-navy,
+html.dark [role="dialog"] .bg-navy,
+html.dark [role="group"] .bg-navy {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+html.dark button.bg-navy:hover,
+html.dark a.bg-navy:hover,
+html.dark button.bg-navy.hover\:bg-ink:hover,
+html.dark a.bg-navy.hover\:bg-ink:hover {
+  background-color: #1d4ed8;
+}
+
+/* Container divs like the top UtilityBar stay deep dark */
+html.dark div.bg-navy {
+  background-color: #090c13;
+  color: #f1f5f9;
+}
+
+html.dark .border-navy {
+  border-color: #3b82f6;
 }
 
 @layer base {

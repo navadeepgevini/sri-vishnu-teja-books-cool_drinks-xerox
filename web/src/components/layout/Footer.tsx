@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { BadgeCheck, Mail, MessageCircle, Phone } from 'lucide-react'
 import { formatTime, telHref, whatsappHref } from '../../data/shop'
 import { useSettings } from '../../hooks/useSettings'
+import ThemeToggle from '../common/ThemeToggle'
 
 export default function Footer() {
   const { t, i18n } = useTranslation()
@@ -69,9 +70,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-border pt-4 text-sm text-muted-strong sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border pt-4 text-sm text-muted-strong sm:flex-row">
           <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
-          <p>{t('footer.serving')}</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <ThemeToggle
+              showLabel
+              className="border border-border bg-paper px-3 py-1.5 text-xs font-semibold text-ink shadow-soft hover:bg-cream"
+            />
+            <span>·</span>
+            <p>{t('footer.serving')}</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -36,7 +36,7 @@ export default function AssistantWidget() {
           onFocus={loadPanel}
           title={t('assistant.openLabel')}
           aria-haspopup="dialog"
-          className="fixed right-4 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-navy px-4 text-base font-semibold text-paper shadow-lift transition-colors hover:bg-ink lg:right-6 lg:bottom-6"
+          className="fixed right-4 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-navy px-4 text-base font-semibold text-paper shadow-lift transition-colors hover:bg-ink dark:border dark:border-border dark:bg-paper dark:text-ink dark:hover:bg-cream lg:right-6 lg:bottom-6"
         >
           <MessageCircleQuestion aria-hidden className="size-5 text-soft-saffron" />
           {t('assistant.open')}

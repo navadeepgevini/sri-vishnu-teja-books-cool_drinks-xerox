@@ -9,6 +9,7 @@ import AssistantWidget from './components/assistant/AssistantWidget'
 import { Canvas3DHost } from './components/product/Product3DViewer'
 import ErrorBoundary from './components/common/ErrorBoundary'
 import PageError from './components/common/PageError'
+import { ThemeProvider } from './hooks/useTheme'
 import Home from './pages/Home'
 
 // Home is the landing page and stays in the main bundle; every other page loads on first visit.
@@ -66,18 +67,20 @@ export default function App() {
   return (
     // Last resort for errors outside a page (header, footer); pages have their own boundary in Layout.
     <ErrorBoundary fallback={<PageError />}>
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="xerox" element={<Xerox />} />
-          <Route path="order-status" element={<OrderStatus />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="shop" element={<Shop />} />
+              <Route path="xerox" element={<Xerox />} />
+              <Route path="order-status" element={<OrderStatus />} />
+              <Route path="cart" element={<Cart />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </ErrorBoundary>
   )
 }

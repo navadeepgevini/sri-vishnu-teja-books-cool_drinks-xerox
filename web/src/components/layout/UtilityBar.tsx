@@ -11,7 +11,7 @@ export default function UtilityBar() {
   const settings = useSettings()
 
   return (
-    <div className="bg-navy text-paper">
+    <div className="bg-navy text-paper dark:bg-[#0a0d14] dark:border-b dark:border-border dark:text-ink">
       <div className="mx-auto flex min-h-12 max-w-7xl items-center justify-between gap-3 px-4 lg:px-10">
         <a
           href={whatsappHref(settings.whatsapp)}

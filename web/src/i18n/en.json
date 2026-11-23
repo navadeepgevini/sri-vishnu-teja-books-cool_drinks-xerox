@@ -53,6 +53,13 @@
     "placeholder": "Search notebooks, pens, xerox…",
     "submit": "Search"
   },
+  "theme": {
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode",
+    "toggleTheme": "Toggle theme",
+    "dark": "Dark mode",
+    "light": "Light mode"
+  },
   "utility": {
     "whatsapp": "WhatsApp the shop",
     "uploadXerox": "Upload for Xerox"
