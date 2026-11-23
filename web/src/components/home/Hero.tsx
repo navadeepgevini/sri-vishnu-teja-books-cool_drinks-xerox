@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, FileText, Rotate3d, Smartphone, Zap } from 'lucide-react'
+import { ArrowRight, FileText, Smartphone, Zap } from 'lucide-react'
 import { formatRupees } from '../../data/shop'
 import { useSettings } from '../../hooks/useSettings'
 import Product3DViewer from '../product/Product3DViewer'
@@ -70,10 +70,6 @@ export default function Hero() {
         </div>
 
         <div className="relative h-[340px] sm:h-[420px] lg:col-span-6 lg:h-[520px]">
-          <p className="pointer-events-none absolute top-2 right-2 z-40 inline-flex items-center gap-2 rounded-full bg-paper px-3.5 py-1.5 text-[13px] font-semibold text-navy shadow-lift lg:top-4 lg:right-4">
-            <Rotate3d aria-hidden className="size-[18px] text-saffron-text" />
-            {t('hero.stageBadge')}
-          </p>
           <Product3DViewer model="hero" label={t('hero.stageLabel')} autoRotate="visible" />
         </div>
       </div>
