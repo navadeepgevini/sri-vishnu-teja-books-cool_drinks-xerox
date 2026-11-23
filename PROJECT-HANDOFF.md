@@ -66,8 +66,8 @@ Build health (2026-09-23): `tsc --noEmit` clean, `npm run build` passes. First-l
   Fix: `npx firebase-tools deploy --only firestore:indexes`.
 - Config: `web\.env` (`VITE_FIREBASE_*`), public identifiers.
 
-**Supabase (project ref `uyamvsjqlxvttlrlhjrx`, Mumbai, free plan):**
-- URL `https://uyamvsjqlxvttlrlhjrx.supabase.co`; `VITE_SUPABASE_URL`,
+**Supabase (project ref `forbrpuinqemfylmjice`, Mumbai, free plan):**
+- URL `https://forbrpuinqemfylmjice.supabase.co`; `VITE_SUPABASE_URL`,
   `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_SUPABASE_BUCKET=Bucket_Files` in `web\.env`.
   The publishable key is public by design. **Never use or ask for the secret / service_role key.**
 - Bucket **`Bucket_Files`**: public, 25 MB limit, PDF / Word / JPEG / PNG / WebP / HEIC / HEIF.
