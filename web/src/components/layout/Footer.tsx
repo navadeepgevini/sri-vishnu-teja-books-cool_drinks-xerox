@@ -13,7 +13,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-10 lg:px-10">
         <div className="grid gap-8 md:grid-cols-12">
           <div className="flex flex-col gap-2 md:col-span-5">
-            <h2 className="text-lg font-semibold text-navy">{t('shop.fullName')}</h2>
+            <div className="flex items-center gap-3">
+              <img src="/logo.png" alt="" width={40} height={40} className="size-10 rounded-full object-contain shadow-sm" />
+              <h2 className="text-lg font-semibold text-navy">{t('shop.fullName')}</h2>
+            </div>
             <p className="max-w-sm text-base text-muted-strong">{t('shop.address')}</p>
             <p className="text-base text-ink">{t('footer.owner', { name: t('shop.owner') })}</p>
             <a

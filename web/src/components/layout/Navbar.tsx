@@ -34,7 +34,7 @@ export default function Navbar() {
           to="/"
           className="flex shrink-0 items-center gap-3 rounded-2xl border border-border bg-soft-paper px-2.5 py-1.5"
         >
-          <img src="/logo.svg" alt="" width={40} height={40} className="size-9 lg:size-10" />
+          <img src="/logo.png" alt="Sri Vishnu Teja logo" width={48} height={48} className="size-10 lg:size-11 shrink-0 rounded-full object-contain shadow-sm" />
           <span className="flex flex-col leading-tight">
             <span className="text-lg font-bold tracking-tight text-navy">{t('shop.name')}</span>
             <span className="text-[13px] font-medium text-muted-strong">{t('shop.tagline')}</span>
