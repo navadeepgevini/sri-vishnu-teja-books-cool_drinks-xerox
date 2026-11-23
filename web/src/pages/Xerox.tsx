@@ -34,6 +34,8 @@ function XeroxForm() {
   const [uploading, setUploading] = useState(false)
   const [progress, setProgress] = useState<Record<number, number>>({})
   const [uploadFailed, setUploadFailed] = useState(false)
+  const [uploadError, setUploadError] = useState<string | null>(null)
+  const [whatsappUrl, setWhatsappUrl] = useState<string | null>(null)
 
   const [copies, setCopies] = useState(1)
   const [colour, setColour] = useState(false)
@@ -110,6 +112,7 @@ function XeroxForm() {
   async function send() {
     if (account.status !== 'signed-in') return
     setUploadFailed(false)
+    setUploadError(null)
     setUploading(true)
     setProgress({})
     try {
@@ -122,11 +125,19 @@ function XeroxForm() {
         ...orderLines(code),
         ...links.map((link, index) => t('pages.xerox.message.link', { index: index + 1, url: link })),
       ].join('\n')
-      window.open(`${whatsappHref(settings.whatsapp)}?text=${encodeURIComponent(text)}`, '_blank', 'noopener')
+      const targetUrl = `${whatsappHref(settings.whatsapp)}?text=${encodeURIComponent(text)}`
+      setWhatsappUrl(targetUrl)
       setSent(true)
+
+      // Try opening in new tab. If popup blocker catches it after async upload, navigate directly:
+      const popup = window.open(targetUrl, '_blank', 'noopener')
+      if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+        window.location.assign(targetUrl)
+      }
     } catch (error) {
-      // Storage not turned on yet, no signal, or the rules rejected the file: fall back to attaching by hand.
       console.error('Uploading the xerox files failed', error)
+      const msg = error instanceof Error ? error.message : String(error)
+      setUploadError(msg)
       setUploadFailed(true)
     } finally {
       setUploading(false)
@@ -146,7 +157,10 @@ function XeroxForm() {
         console.warn('Sharing files failed; opening WhatsApp with the details instead.', error)
       }
     }
-    window.open(fallbackHref, '_blank', 'noopener')
+    const popup = window.open(fallbackHref, '_blank', 'noopener')
+    if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+      window.location.assign(fallbackHref)
+    }
     setSent(true)
   }
 
@@ -323,6 +337,11 @@ function XeroxForm() {
             <div role="alert" className="mt-4 rounded-2xl border border-border bg-cream p-4">
               <p className="text-base font-semibold text-navy">{t('pages.xerox.uploadFailedTitle')}</p>
               <p className="mt-1 text-sm text-muted-strong">{t('pages.xerox.uploadFailedBody')}</p>
+              {uploadError && (
+                <p className="mt-2 text-xs font-mono text-error break-all bg-paper p-2 rounded-lg border border-border">
+                  {uploadError}
+                </p>
+              )}
               <button
                 type="button"
                 onClick={sendWithoutUpload}
@@ -334,9 +353,28 @@ function XeroxForm() {
             </div>
           )}
 
-          {sent && (
+          {sent && !uploadFailed && (
+            <div role="status" className="mt-4 rounded-2xl border border-success/30 bg-paper p-4 shadow-sm">
+              <p className="text-base font-semibold text-success-text">
+                {t('pages.xerox.sentWithFilesNote')}
+              </p>
+              {whatsappUrl && (
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-full bg-success px-5 text-base font-semibold text-paper transition-colors hover:bg-success-text"
+                >
+                  <MessageCircle aria-hidden className="size-5" />
+                  Open WhatsApp Chat
+                </a>
+              )}
+            </div>
+          )}
+
+          {sent && uploadFailed && (
             <p role="status" className="mt-2 text-sm font-semibold text-success-text">
-              {uploadFailed ? t('pages.xerox.sentNote') : t('pages.xerox.sentWithFilesNote')}
+              {t('pages.xerox.sentNote')}
             </p>
           )}
         </div>

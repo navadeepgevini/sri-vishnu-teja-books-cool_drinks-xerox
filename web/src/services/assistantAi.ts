@@ -2,8 +2,12 @@
 // and answers only from the shop's facts plus the product lines we send (see
 // supabase/functions/shop-assistant/index.ts). Plain fetch, so the Supabase library is not loaded.
 
-const url = import.meta.env.VITE_SUPABASE_URL as string | undefined
-const key = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined
+const url =
+  (import.meta.env.VITE_SUPABASE_URL as string | undefined) ||
+  'https://forbrpuinqemfylmjice.supabase.co'
+const key =
+  (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined) ||
+  'sb_publishable_a3jKm3nQhq0pJ9SwnM6N6g_hEqzDo5p'
 
 export type AiResult = { ok: true; answer: string } | { ok: false; reason: 'busy' | 'unavailable' }
 

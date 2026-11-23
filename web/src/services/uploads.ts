@@ -8,8 +8,12 @@ import { createClient } from '@supabase/supabase-js'
 // policy. Visitors can upload but cannot list, change or delete anything. Each upload goes into a folder
 // with a random UUID in its name, so a file's link cannot be guessed; only the shop receives it.
 
-const url = import.meta.env.VITE_SUPABASE_URL as string | undefined
-const key = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined
+const url =
+  (import.meta.env.VITE_SUPABASE_URL as string | undefined) ||
+  'https://forbrpuinqemfylmjice.supabase.co'
+const key =
+  (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined) ||
+  'sb_publishable_a3jKm3nQhq0pJ9SwnM6N6g_hEqzDo5p'
 const bucket = (import.meta.env.VITE_SUPABASE_BUCKET as string | undefined) || 'Bucket_Files'
 
 const supabase =
